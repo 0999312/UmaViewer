@@ -63,7 +63,7 @@ public class UmaViewerMain : MonoBehaviour
                 {
                     if (!enNames.ContainsKey((int)item["charaId"]))
                     {
-                        enNames.Add((int)item["charaId"], item["charaNameEnglish"].ToString());
+                        enNames.Add((int)item["charaId"], item["charaName"].ToString());
                     }
                 }
             });
@@ -78,7 +78,7 @@ public class UmaViewerMain : MonoBehaviour
             {
                 if (!mobNames.ContainsKey((int)item["mobId"]))
                 {
-                    mobNames.Add((int)item["mobId"], Config.Instance.Language == Language.Jp ? item["mobName"].ToString() : item["mobNameEnglish"].ToString());
+                    mobNames.Add((int)item["mobId"], item["mobName"].ToString());
                 }
             }
         });
